@@ -1,3 +1,7 @@
 #button-area button {
     color: aqua;
 }
+
+body {
+    background-color: rgb(216, 216, 216);
+}
