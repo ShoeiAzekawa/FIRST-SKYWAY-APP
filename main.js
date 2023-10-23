@@ -50,7 +50,7 @@ const token = new SkyWayAuthToken({
 
 //このコードブロックは非同期関数として宣言され、即時実行されます。アプリケーションの実行を開始します。
 (async () => {
-  const localVideo = document.getElementById('local-video');
+  //const localVideo = document.getElementById('local-video');
   const buttonArea = document.getElementById('button-area');
   const remoteMediaArea = document.getElementById('remote-media-area');
   const roomNameInput = document.getElementById('room-name');
@@ -58,10 +58,9 @@ const token = new SkyWayAuthToken({
   const myId = document.getElementById('my-id');
   const joinButton = document.getElementById('join');
 
-  const { audio, video } =
-    await SkyWayStreamFactory.createMicrophoneAudioAndCameraStream();
-  video.attach(localVideo);
-  await localVideo.play();
+  const { audio } = await SkyWayStreamFactory.createMicrophoneAudioAndCameraStream();
+  // video.attach(localVideo);
+  // await localVideo.play();
 
   joinButton.onclick = async () => {
     if (roomNameInput.value === '') return;
@@ -76,7 +75,7 @@ const token = new SkyWayAuthToken({
     myId.textContent = me.id;
 
     await me.publish(audio);
-    // await me.publish(video);
+    //await me.publish(video);
 
     const subscribeAndAttach = (publication) => {
       if (publication.publisher.id === me.id) return;
@@ -90,7 +89,7 @@ const token = new SkyWayAuthToken({
 
         let newMedia;
         switch (stream.track.kind) {
-          // case 'video':
+          case 'video':
             // newMedia = document.createElement('video');
             // newMedia.playsInline = true;
             // newMedia.autoplay = true;
