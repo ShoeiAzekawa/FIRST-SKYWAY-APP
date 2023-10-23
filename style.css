@@ -1,7 +1,53 @@
-#button-area button {
-    color: aqua;
-}
-
 body {
     background-color: rgb(216, 216, 216);
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: brown;
+}
+
+#room-name {
+    display: block;
+    margin-right: 10px;
+}
+
+#join {
+    display: block;
+}
+
+#memo-space {
+    display: block;
+    width: 50%;
+}
+
+#game-canvas {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 250px 0;
+    margin: 10px auto;
+}
+
+#button-area {
+    background-color: aqua;
+    display: flex;
+}
+
+#button-area button {
+    width: calc(100% / 5.5);
+    margin-left: 10px;
 }

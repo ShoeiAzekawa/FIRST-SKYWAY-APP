@@ -7,13 +7,22 @@
     <title>SkyWay Tutorial</title>
   </head>
   <body>
-    <p>VERSION 1 ID: <span id="my-id"></span></p>
-    <div>
-      room name: <input id="room-name" type="text" />
-      <button id="join">join</button>
-    </div>
     <!-- <video id="local-video" width="400px" muted playsinline></video> -->
-    <div id="button-area"></div>
+
+    <p>VERSION 2 ID: <span id="my-id"></span></p>
+    <header>
+      <input id="room-name" type="text" placeholder="room name" />
+      <button id="join">join</button>
+    </header>
+
+    <div id="game-canvas">GAME SCREEN</div>
+    
+    <footer>
+      <textarea id="memo-space" placeholder="memo space"></textarea>
+      <div id="button-area"></div>
+    </footer>
+
+    
     <div id="remote-media-area"></div>
     <script src="https://cdn.jsdelivr.net/npm/@skyway-sdk/room/dist/skyway_room-latest.js"></script>
     <script src="main.js"></script>
