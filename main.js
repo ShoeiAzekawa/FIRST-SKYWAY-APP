@@ -98,6 +98,7 @@ const token = new SkyWayAuthToken({
             newMedia = document.createElement('audio');
             newMedia.controls = true;
             newMedia.autoplay = true;
+            newMedia.id = "audio-check";
             break;
           default:
             return;

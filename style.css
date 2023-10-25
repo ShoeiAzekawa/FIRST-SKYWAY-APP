@@ -51,3 +51,12 @@ footer {
     width: calc(100% / 5.5);
     margin-left: 10px;
 }
+
+#remote-media-area {
+    background-color: black;
+}
+
+#audio-check {
+    width: 10px;
+    background-color: aquamarine;
+}
